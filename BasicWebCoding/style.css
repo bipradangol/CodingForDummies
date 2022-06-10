@@ -13,3 +13,22 @@ h1 {
 .light {
     color: aquamarine;
 }
+body {
+    background-image: url("https://img.freepik.com/free-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+em {
+    font-family: Arial, serif;
+}
+ul {
+    list-style-type: square;
+}
+ol {
+    list-style-type: upper-roman;
+}
+li {
+    font-size: 27px;
+}
