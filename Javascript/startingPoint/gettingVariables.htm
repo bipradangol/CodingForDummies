@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+	
+<html>
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>Getting Variables</title>
+	</head>
+	
+	<body>
+	Learning Javascript
+	<script type="text/javascript">
+		var theAnswer = 42;
+		console.log(theAnswer);
+		console.log(typeof theAnswer);
+		// var theMessage = "The alert function displays a message in a dialog box.";
+		// window.alert(theMessage);
+		// theMessage = "Here we're just changing variable's value...";
+		// window.alert(theMessage)
+		theAnswer = null;
+		console.log(theAnswer)
+		console.log(typeof theAnswer);
+		var newVar;
+		console.log(newVar);
+
+		// Arrays
+		var emptyArray = [];
+		var numbersArray = [42, 12, 57, 3.14, 901582, 5];
+		var stringsArray = ["Oliver", "Kate", "Sajid", "Harry", "Potter"];
+		var myArray = new Array();
+		var mixedArray = ["Oliver", true, false, 5];
+		var arraysArray = [emptyArray, numbersArray, stringsArray, mixedArray];
+
+		var namesArray = ["Oliver", "Kate", "Sajid", "Harry", "Monisha"];
+		console.log(namesArray);
+		console.log("3rd item of array: ", namesArray[2]);
+		console.log(namesArray.length);
+		namesArray.push("Kristoff");
+		console.log(namesArray);
+		console.log(namesArray.length);
+
+		//Objects
+		var player1 = new Object();
+		player1.name = "Cathy";
+		player1.age = 15;
+		player1.maxScore = 40562634;
+
+		var player2 = {name: "Tula", age: 14, maxScore: 25693725};
+		var currentGameScores = {};
+
+		var actualResult = 4 * 12 - 9;
+		console.log("4 * 12 - 9 equals " + actualResult);
+		var possResult1 = (4 * 20) - 9;
+		console.log("(4 * 20) - 9 equals " + possResult1);
+		var possResult2 = 4 * (20 - 9);
+		console.log("4 * (20 - 9) equals " + possResult2);
+
+	</script>
+	</body>
+	
+</html>
