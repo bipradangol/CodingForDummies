@@ -1,0 +1,59 @@
+#all {
+    border: 2px solid black;
+    width: 100%;
+    position: relative;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    /*background-position: 50% 50%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+}
+#all::before {
+    content: "";
+    background-image: linear-gradient(to right, red , yellowgreen, green, cadetblue, cyan);;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.75;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+#main {
+    border-bottom: 3px solid aquamarine;
+    text-align: center;
+    position: relative;
+}
+h1 {
+    color: #cd1e21;
+    font-family: fantasy;
+    position: relative;
+}
+#left {
+    float: left;
+    width: 58.6%;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+#right {
+    border-left: 3px solid blue;
+    float: right;
+    width: 40%;
+    position: relative;
+}
+#foot {
+    position: relative;
+    clear: both;
+    text-align: left;
+    border-top: 3px solid purple;
+    padding-left: 25px;
+}
+
+img {
+    opacity: 0.2;
+}
+body {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, red , yellowgreen, green, cadetblue, cyan);
+}
