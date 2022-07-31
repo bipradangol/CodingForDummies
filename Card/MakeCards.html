@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<input type="text" placeholder="Full Name" id="name">
+<input type="text" placeholder="Job Position" id="position">
+<select name="Gender" id="gender">
+    <option value="B" disabled selected value>Select One</option>
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+</select>
+<button onclick="add()">Add</button>
+<!--<button onclick="remove()">Delete</button>-->
+<div id="trash" class="trash" ondragover="allowDrop(event)" ondrop="deleteItem(event)">Drag a card here to delete</div>
+<div id="content">
+    <div id="card" class="card" style="border: 1px solid red" draggable="true" ondragstart="drag(event)">
+        <img src="img/person.png" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
