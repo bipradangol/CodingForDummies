@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p id="demo"></p>
+</body>
+<script>
+  class Car {
+    constructor(model, year, ownerName, ownerAddress) {
+      this.model = model;
+      this.year = year;
+      this.ownerName = ownerName;
+      this.ownerAddress = ownerAddress;
+
+    }
+    age() {
+      let date = new Date();
+      return date.getFullYear() - this.year;
+    }
+  }
+
+  class Person {
+      constructor(name, age, address) {
+          this.name = name;
+          this.age = age;
+          this.address = address;
+      }
+  }
+
+  class Address {
+      constructor(street, city, state, zip) {
+          this.street = street;
+          this.city = city;
+          this.state = state;
+          this.zip = zip;
+      }
+  }
+  let addresses = [new Address("124 Main Street", "Denver", "Colorado", 15000), new Address("321 Drive", "Orlando", "Florida", 12000), new Address("213 Fair Drive", "New York City", "New York", 17000), new Address("300 Cold Lane", "Boston", "Massachusetts", 18008), new Address("987 Avenue", "Philadelphia", "Pennsylvania", 11000)];
+  let cars = [new Car("Toyota", null, "Ram"), new Car("Honda", 2015, "Jone"), new Car("Mitsubishi", "", "William"), new Car("Subaru", 2018, "Bryan"), new Car("Tesla", NaN, "Sonali")];
+  let people = [new Person("Ram", 40, addresses[0]), new Person("Sonali", 30, addresses[1]), new Person("William", 65, addresses[2]), new Person("Jone", 20, addresses[3]), new Person("Bryan", 50, addresses[4])];
+  //let carYears = [cars[0].year];
+  let carYears = [];
+  for (let i = 0; i < cars.length; i++) {
+    let year = cars[i].year;
+    if (year !== null && year !== "" && !isNaN(year)) {
+      carYears.push(cars[i].year);
+    }
+  }
+  console.log(cars);
+  console.log(people);
+  document.getElementById("demo").innerText = carYears;
+
+  for (let i = 0; i < cars.length; i++) {
+      let car = cars[i];
+      for (let j = 0; j < people.length; j++) {
+          let person = people[j];
+          if (car.ownerName === person.name) {
+              car.ownerAddress = person.address;
+              break;
+          }
+      }
+  }
+  console.log(cars);
+</script>
+</html>
