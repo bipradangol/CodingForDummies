@@ -1,0 +1,38 @@
+ui {
+    list-style: none;
+}
+.randomNumbers {
+
+    padding-top: 10px;
+}
+
+.ball {
+    width: 5rem;
+    height: 5rem;
+    line-height: 4.8rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    border-radius: 2.5rem;
+    border: 1px solid #999;
+    display: inline-block;
+}
+
+.win {
+    background-color: green;
+}
+
+.yellowBall {
+    background-color: yellow;
+    border: yellow;
+}
+
+.luckyPowerBall {
+    background-color: darkorange;
+}
+
+#box {
+    border: 5px solid darkred;
+    padding: 5px;
+}
