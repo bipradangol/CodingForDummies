@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Javascript</title>
+</head>
+<body>
+  <script>
+    var age=22;
+    var planet="Earth";
+    if (age >= 18) {
+      console.log("You are an adult");
+      console.log("You are over 18");
+    } else {
+      console.log("You are not an adult");
+      console.log("You are not over 18");
+    }
+    alert("You have mail");
+
+    function amountDue(price, quantity) {
+      var subtotal = price * quantity;
+      var tax = 1.05;
+      var total = subtotal * tax;
+      return total;
+    }
+    function greeting() {
+      var food = prompt("What do you want for dinner?");
+      alert("Your order for " + food + " has been set. The amount due is $" + amountDue(10,3) + ". Thank you.")
+    }
+    greeting();
+  </script>
+</body>
+</html>
