@@ -1,0 +1,26 @@
+#all {
+    border: 2px solid rebeccapurple;
+    width: 100%;
+}
+
+#main {
+    border-bottom: 2px solid cadetblue;
+    text-shadow: 0px 1px 5px darkgoldenrod;
+}
+
+#left {
+    width: 48%;
+    display: inline-block;
+}
+
+#right {
+    margin: auto;
+    padding: 5px;
+    width: 48%;
+    border-left: 2px solid green;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+}
