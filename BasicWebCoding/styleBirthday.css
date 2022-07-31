@@ -1,0 +1,96 @@
+.card {
+    position: relative;
+    left: 200px;
+    top: 200px;
+    background-color: #78c6e2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 50%;
+    border-radius: 5px;
+    margin: 5px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 12;
+    animation-direction: alternate-reverse;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255,0,0,0.4);
+}
+
+.container {
+    padding: 2px 16px;
+    text-shadow: 1px 1px 3px red;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+/*div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}*/
+
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:400px; top:0px;}
+    50%  {background-color:blue; left:400px; top:300px;}
+    75%  {background-color:green; left:0px; top:300px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+.bodyAnimation {
+    background-color: #4a2d80;
+    animation-name: bodyAnimate;
+    animation-duration: 4s;
+    animation-iteration-count: 12;
+    animation-direction: alternate-reverse;
+
+}
+
+@keyframes bodyAnimate {
+    0%   {background-color:green;}
+    25%  {background-color:red;}
+    50%  {background-color:yellow;}
+    75%  {background-color:blue;}
+    100% {background-color:green;}
+}
+
+.marquee-parent {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+}
+.marquee-child {
+    display: block;
+    width: 600px;
+    color: #b01515;
+    font-weight:bold;
+    font-size: xxx-large;
+    text-shadow: 0px 1px 5px darkgoldenrod;
+    /* width of your text div */
+    height: 100px;
+    /* height of your text div */
+    position: absolute;
+    animation: marquee 5s linear infinite; /* change 5s value to your desired speed */
+}
+.marquee-child:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+@keyframes marquee {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -600px /* same as your text width */
+    }
+}
