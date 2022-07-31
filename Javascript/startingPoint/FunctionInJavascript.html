@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Introducing the doMath function</title>
-
 </head>
 <body>
 <h1>Do the Math</h1>
 <div id="theResult"></div>
-<div id="theResult2"></div><script type="text/javascript" src="myScript.js"></script>
+<div id="theResult2"></div>
+<script type="text/javascript" src="myScript.js"></script>
+<button onclick="add()">Add</button>
+<button onclick="del()">Delete</button>
+<button onclick="changeBackground()">Background</button>
+<br><br><br>
+<input type="text" id="num1" placeholder="Enter a number" value="0"> +
+<input type="text" id="num2" placeholder="Enter a number"> =
+<input type="text" id="result1" readonly>
+<br><br>
+<button onclick="addTwoNumbers()" style="background-color:#006400;">Calculate</button>
+<br><br><br>
+<input type="text" id="numSub1" placeholder="Enter a number"> -
+<input type="text" id="numSub2" placeholder="Enter a number"> =
+<input type="text" id="result2" readonly>
+<br><br>
+<button onclick="subtractTwoNumbers()" style="background-color:#006400;">Calculate</button>
+<br><br>
+<p>Enter any number:</p>
+<span>Adding the numbers from 1 to </span>
+<input type="number" id="input"> =
+<input type="number" id="answer" readonly>
+<button onclick="addUp()">Calculate</button>
+<br><br>
+<input type="number" id="insertNum">
+<button onclick="findFibonacciNum()">Calculate Fibonacci Number</button>
+<br><br>
+<div id="fibonacciNum"></div>
 </body>
 
 </html>
