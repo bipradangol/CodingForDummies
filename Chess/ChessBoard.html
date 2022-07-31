@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <link rel="stylesheet" href="style.css">
+    <script rel="text/javascript" src="script.js"></script>
+</head>
+<body>
+<!--    <div class="black"></div>-->
+<!--    <div class="white"></div>-->
+<!--    <div class="black"></div>-->
+<!--    <div class="white"></div>-->
+<!--    <div class="black"></div>-->
+<!--    <div class="white"></div>-->
+<!--    <div class="black"></div>-->
+<!--    <div class="white"></div>-->
+
+<!--    <div class="black"></div>-->
+<!--    <div class="white"></div>-->
+<!--    <div class="black"></div>-->
+<!--    <div class="white"></div>-->
+<h1 style="font-family: 'Chopin Script', cursive; text-align: center;">Chessboard</h1>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+        </tr>
+
+        <tr>
+            <th>8</th>
+            <td class="white"><div id="rook1" draggable="true" ondragstart="drag(event)">♜</div></td>
+            <td class="black"><div id="knight1" draggable="true" ondragstart="drag(event)">♞</div></td>
+            <td class="white"><div id="bishop1" draggable="true" ondragstart="drag(event)">♝</div></td>
+            <td class="black"><div id="queen" draggable="true" ondragstart="drag(event)">♛</div></td>
+            <td class="white"><div id="king" draggable="true" ondragstart="drag(event)">♚</div></td>
+            <td class="black"><div id="bishop2" draggable="true" ondragstart="drag(event)">♝</div></td>
+            <td class="white"><div id="knight2" draggable="true" ondragstart="drag(event)">♞</div></td>
+            <td class="black"><div id="rook2" draggable="true" ondragstart="drag(event)">♜</div></td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td class="black"><div id="pb1" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="white"><div id="pb2" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="black"><div id="pb3" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="white"><div id="pb4" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="black"><div id="pb5" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="white"><div id="pb6" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="black"><div id="pb7" draggable="true" ondragstart="drag(event)">♟</div></td>
+            <td class="white"><div id="pb8" draggable="true" ondragstart="drag(event)">♟</div></td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="black" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+            <td class="white" ondragover="allowDrop(event)" ondrop="moveItem(event)"></td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td class="white"><div id="p1" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="black"><div id="p2" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="white"><div id="p3" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="black"><div id="p4" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="white"><div id="p5" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="black"><div id="p6" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="white"><div id="p7" draggable="true" ondragstart="drag(event)">♙</div></td>
+            <td class="black"><div id="p8" draggable="true" ondragstart="drag(event)">♙</div></td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td class="black"><div id="r1" draggable="true" ondragstart="drag(event)">♖</div></td>
+            <td class="white"><div id="k1" draggable="true" ondragstart="drag(event)">♘</div></td>
+            <td class="black"><div id="b1" draggable="true" ondragstart="drag(event)">♗</div></td>
+            <td class="white"><div id="queen2" draggable="true" ondragstart="drag(event)">♕</div></td>
+            <td class="black"><div id="king2" draggable="true" ondragstart="drag(event)">♔</div></td>
+            <td class="white"><div id="b2" draggable="true" ondragstart="drag(event)">♗</div></td>
+            <td class="black"><div id="k2" draggable="true" ondragstart="drag(event)">♘</div></td>
+            <td class="white"><div id="r2" draggable="true" ondragstart="drag(event)">♖</div></td>
+        </tr>
+    </table>
+</body>
+</html>

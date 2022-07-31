@@ -1,0 +1,21 @@
+.black {
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    border: 1px solid black;
+}
+
+.white {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+}
+
+td {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    font-size: 52px;
+    line-height: 0;
+}
