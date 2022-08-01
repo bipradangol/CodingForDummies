@@ -1,13 +1,13 @@
 .black {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: darkgray;
     border: 1px solid black;
 }
 
 .white {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: lightgray;
     border: 1px solid lightgray;
 }
