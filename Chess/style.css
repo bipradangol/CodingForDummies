@@ -1,3 +1,9 @@
+body {
+    font-family: "";
+}
+table {
+    border-collapse: separate;
+}
 .black {
     width: 80px;
     height: 80px;
