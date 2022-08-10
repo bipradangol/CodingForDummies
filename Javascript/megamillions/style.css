@@ -1,8 +1,10 @@
-ui {
-    list-style: none;
+ul {
+    list-style: square;
 }
+/*li {*/
+/*    padding: 0 0.7rem;*/
+/*}*/
 .randomNumbers {
-
     padding-top: 10px;
 }
 
