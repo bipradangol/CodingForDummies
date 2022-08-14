@@ -10,37 +10,40 @@
     <link rel="stylesheet" href="../Portfolio/assets/css/fontawesome.css">
     <link rel="stylesheet" href="../Portfolio/assets/css/style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../all.css">
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../" title="Html Css and Javascript"><i class="fa fa-home" style="font-size:36px"></i><span style="margin-left: 10px">Home</span></a>
+        <a class="navbar-brand" href="../" title="Html Css and Javascript"><i class="fa fa-home styleIcon"></i><span style="margin-left: 10px; color: white">Home</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../Portfolio/index.html" title="Portfolio"><i class="fas fa-user-circle" style="width: 36px; color: white"></i></a>
+                    <a class="navbar-brand" href="../Portfolio/index.html" title="Portfolio"><i class="fas fa-user-circle styleIcon"></i><span style="margin-left: 10px">Portfolio</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../ajax/weather/weather.html" title="Weather"><i class="fas fa-cloud-sun" style="width: 36px; color: white"></i></a>
+                    <a class="navbar-brand" href="../ajax/weather/weather.html" title="Weather"><i class="fas fa-cloud-sun styleIcon"></i><span style="margin-left: 10px">Weather</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../ajax/github.html" title="Github Users"><i class="fas fa-user" style="font-size:36px"></i></a>
+                    <a class="navbar-brand" href="../ajax/github.html" title="Github Users"><i class="fas fa-user-friends styleIcon"></i><span style="margin-left: 10px">Github Users</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../Chess/ChessBoard.html" title="Chessboard"><i class="fas fa-chess" style="width: 36px; color: white"></i></a>
+                    <a class="navbar-brand" href="../Chess/ChessBoard.html" title="Chessboard"><i class="fas fa-chess styleIcon"></i><span style="margin-left: 10px">Chess</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../Javascript/megamillions/megamillions.html" title="Mega Millions"><i class="fas fa-money-bill-wave" style="width: 36px; color: white"></i></a>
+                    <a class="navbar-brand" href="../Javascript/megamillions/megamillions.html" title="Mega Millions"><i class="fas fa-money-bill-wave styleIcon"></i><span style="margin-left: 10px">Mega Millions</span></a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container-fluid" style="margin-top:80px">
+    <h1 style="font-family: 'Chopin Script', cursive; text-align: center;"><b>Make Cards</b></h1>
+    <div class="heading-line mb-1"></div>
     <input type="text" placeholder="Full Name" id="name">
     <input type="text" placeholder="Job Position" id="position">
     <select name="Gender" id="gender">
@@ -48,7 +51,7 @@
         <option value="M">Male</option>
         <option value="F">Female</option>
     </select>
-    <button onclick="add()">Add</button>
+    <button onclick="add()" class="btn btn-primary">Add</button>
     <!--<button onclick="remove()">Delete</button>-->
     <div id="trash" class="trash" ondragover="allowDrop(event)" ondrop="deleteItem(event)">Drag a card here to delete</div>
     <div id="content">

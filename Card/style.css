@@ -32,3 +32,12 @@ img {
 .trash:hover {
     background-color: #FF8C8C;
 }
+
+@media (max-width: 1000px) {
+    h4, .h4 {
+        font-size: 1rem;
+    }
+    .card {
+        width: 45%;
+    }
+}

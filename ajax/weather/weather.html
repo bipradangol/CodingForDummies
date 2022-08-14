@@ -10,30 +10,31 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../../Portfolio/assets/css/fontawesome.css">
   <link rel="stylesheet" href="../../Portfolio/assets/css/style.css">
+  <link rel="stylesheet" href="../../all.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="../../" title="Html Css and Javascript"><i class="fa fa-home" style="font-size:36px"></i><span style="margin-left: 10px">Home</span></a>
+    <a class="navbar-brand" href="../../" title="Html Css and Javascript"><i class="fa fa-home styleIcon"></i><span style="margin-left: 10px; color: white">Home</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="navbar-brand" href="../../Portfolio/index.html" title="Portfolio"><i class="fas fa-user-circle" style="font-size:36px; color: white"></i></a>
+          <a class="navbar-brand" href="../../Portfolio/index.html" title="Portfolio"><i class="fas fa-user-circle styleIcon"></i><span style="margin-left: 10px">Portfolio</span></a>
         </li>
         <li class="nav-item">
-          <a class="navbar-brand" href="../github.html" title="Github Users"><i class="fas fa-user" style="font-size:36px; color: white"></i></a>
+          <a class="navbar-brand" href="../github.html" title="Github Users"><i class="fas fa-user-friends styleIcon"></i><span style="margin-left: 10px">Github Users</span></a>
         </li>
         <li class="nav-item">
-          <a class="navbar-brand" href="../../Chess/ChessBoard.html" title="Chessboard"><i class="fas fa-chess" style="width: 36px; color: white"></i></a>
+          <a class="navbar-brand" href="../../Chess/ChessBoard.html" title="Chessboard"><i class="fas fa-chess styleIcon"></i><span style="margin-left: 10px">Chess</span></a>
         </li>
         <li class="nav-item">
-          <a class="navbar-brand" href="../../Card/MakeCards.html" title="Make Cards"><i class="fas fa-user-edit" style="width: 36px; color: white"></i></a>
+          <a class="navbar-brand" href="../../Card/MakeCards.html" title="Make Cards"><i class="fas fa-user-edit styleIcon"></i><span style="margin-left: 10px">Make Cards</span></a>
         </li>
         <li class="nav-item">
-          <a class="navbar-brand" href="../../Javascript/megamillions/megamillions.html" title="Mega Millions"><i class="fas fa-money-bill-wave" style="width: 36px; color: white"></i></a>
+          <a class="navbar-brand" href="../../Javascript/megamillions/megamillions.html" title="Mega Millions"><i class="fas fa-money-bill-wave styleIcon"></i><span style="margin-left: 10px">Mega Millions</span></a>
         </li>
       </ul>
     </div>
@@ -41,10 +42,10 @@
 </nav>
 <div class="container-fluid" style="margin-top:80px">
   <h1 style="font-family: 'Chopin Script', cursive; text-align: center;"><b>Weather</b></h1>
-<hr><br><br>
+  <div class="heading-line mb-1"></div>
 <div class="container">
   <div class="form-group">
-    <input type="number" id="zip" placeholder="Zip Code">
+    <input type="number" id="zip" placeholder="Zip Code" value="80033">
   </div>
   <div class="form-check">
 
@@ -57,7 +58,7 @@
       <input type="radio" class="form-check-input" id="centigrade" name="units" value="metric" checked>Centigrade
     </label>
   </div>
-  <button class="btn btn-primary" onclick="getTemperature()">Generate Temperature</button>
+  <button class="btn btn-primary" onclick="getTemperature()">Show Temperature</button>
   <br><br>
   <div style="border: 3px solid royalblue; width: 30%">
     <h1 style="padding: 15px">Now</h1>
