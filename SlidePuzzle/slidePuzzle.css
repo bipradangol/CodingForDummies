@@ -1,0 +1,29 @@
+.moveCount {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0a53be;
+}
+
+/*body {*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    text-align: center;*/
+/*    color: #0a53be;*/
+/*}*/
+
+#board {
+    width: 374px; /*360px;*/
+    height: 374px; /*360px;*/
+    background-color: lightblue;
+    border: 10px solid #0a53be;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board img {
+    width: 118px;
+    height: 118px;
+    /*margin: 0 auto;*/
+    border: 1px solid #0a53be;
+}
