@@ -1,9 +1,13 @@
 function generateNewNumbers() {
     let ticketNumbers = [];
     for (let i = 1; i < 6; i++) {
-        let randomNum = Math.floor(Math.random() * 70) + 1;
+        let randomNum = 0;
+        do {
+            randomNum = Math.floor(Math.random() * 70) + 1;
+        } while (ticketNumbers.includes(randomNum));
         ticketNumbers.push(randomNum);
     }
+
     ticketNumbers.sort((a, b) => a - b);
     for (let i = 1; i < 6; i++) {
         document.getElementById("wBall" + i).innerHTML = ticketNumbers[i - 1];
@@ -44,7 +48,11 @@ function generateWinningNumbers() {
     removeLuckyPowerBallStyle();
     let winNums = [];
     for (let i = 1; i < 6; i++) {
-        let winningNum = Math.floor(Math.random() * 70) + 1;
+        let winningNum = 0;
+        do {
+            winningNum = Math.floor(Math.random() * 70) + 1;
+            // console.log(winningNum);
+        } while (winNums.includes(winningNum));
         winNums.push(winningNum);
         if (winningNumberExists(winningNum)) {
             // get element with that number

@@ -28,8 +28,8 @@ window.onload = function () {
     }
 }
 
-function dragStart() {
-    currTile = this;
+function dragStart(e) {
+    currTile = e.target; // or this;
 }
 
 function dragOver(e) {
