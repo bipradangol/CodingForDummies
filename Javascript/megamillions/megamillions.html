@@ -58,7 +58,7 @@
       <li class="ball" id="wBall5"></li>
       <li class="ball yellowBall" id="gBall"></li>
     </ul>
-    <button onclick="generateNewNumbers()" style="display: inline-block;">Generate Mega Million Ticket Numbers</button>
+    <button onclick="generateNewNumbers()" style="display: inline-block;" class="btn-outline-info">Generate Mega Million Ticket Numbers</button>
   </div>
   <div>
     <ul class="winningNumbers" style="display: inline-block">
@@ -69,7 +69,7 @@
       <li class="ball" id="whiteB5"></li>
       <li class="ball yellowBall" id="goldB"></li>
     </ul>
-    <button onclick="generateWinningNumbers()" style="display: inline-block;">Generate Winning Numbers</button>
+    <button onclick="generateWinningNumbers()" style="display: inline-block;" class="btn-outline-success">Generate Winning Numbers</button>
   </div>
 
   <h1 id="result"></h1>
@@ -81,7 +81,7 @@
     <li id="randomNumbers5"></li>
     <li id="randomNumbers6"></li>
   </ul>
-  <button onclick="generateRandomNumbers()">Generate Random Numbers</button>
+  <button onclick="generateRandomNumbers()" class="btn btn-primary">Generate Random Numbers</button>
 
   <p id="countries"></p>
   <div id="box">
@@ -89,8 +89,8 @@
       <option disabled selected>Select Country</option>
     </select>
     <br><br><br>
-    <button onclick="countries()">Top Countries First</button>
-    <button onclick="sortCountries()">Sort Only</button>
+    <button onclick="countries()" class="btn btn-primary">Top Countries First</button>
+    <button onclick="sortCountries()" class="btn btn-primary">Sort Only</button>
   </div>
 </div>
 </body>

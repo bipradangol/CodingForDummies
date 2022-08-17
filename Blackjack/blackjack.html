@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Portfolio/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../Portfolio/assets/css/style.css">
+    <link rel="stylesheet" href="../all.css">
+    <link rel="stylesheet" href="blackjack.css">
+    <script src="blackjack.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="../" title="Html Css and Javascript"><i class="fa fa-home styleIcon"></i><span style="margin-left: 10px; color: white">Home</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="../Portfolio/index.html" title="Portfolio"><i class="fas fa-user-circle styleIcon"></i><span style="margin-left: 10px">Portfolio</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="../ajax/weather/weather.html" title="Weather"><i class="fas fa-cloud-sun styleIcon"></i><span style="margin-left: 10px">Weather</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="../ajax/github.html" title="Github Users"><i class="fas fa-user-friends styleIcon"></i><span style="margin-left: 10px">Github Users</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="../Chess/ChessBoard.html" title="Chessboard"><i class="fas fa-chess styleIcon"></i><span style="margin-left: 10px">Chess</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="../Card/MakeCards.html" title="Make Cards"><i class="fas fa-user-edit styleIcon"></i><span style="margin-left: 10px">Make Cards</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="../Javascript/megamillions/megamillions.html" title="Mega Millions"><i class="fas fa-money-bill-wave styleIcon"></i><span style="margin-left: 10px">Mega Millions</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="../SlidePuzzle/slidePuzzle.html" title="Slide Puzzle"><i class="fas fa-puzzle-piece styleIcon"></i><span style="margin-left: 10px">Slide Puzzle</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" style="margin-top: 80px">
+  <h1 style="font-family: 'Chopin Script', cursive; text-align: center;"><b>Blackjack</b></h1>
+  <div class="heading-line mb-1"></div>
+  <h3 class="text-center">Instructions:</h3>
+  <p class="text-center lh-lg">Click Hit to receive another card and Stay to end your turn.</p>
+  <div id="body">
+    <h2>Dealer: <span id="dealer-sum"></span></h2>
+    <div id="dealer-cards">
+      <img id="hidden" src="./cards/BACK.png" alt="">
+    </div>
+    <br>
+    <h2>You: <span id="your-sum"></span></h2>
+    <div id="your-cards"></div>
+
+    <br>
+    <button id="hit"  class="btn btn-primary">Hit</button>
+    <button id="stay" class="btn btn-primary">Stay</button>
+    <br><br>
+    <p id="results" style="font-weight: bold"></p>
+  </div>
+</div>
+</body>
+</html>
