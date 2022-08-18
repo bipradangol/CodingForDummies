@@ -12,6 +12,8 @@ var canHit = true;//allows the player (you) to draw while yourSum <= 21
 var backCardOrig;
 var backCard
 
+let currentAmount = 0;
+
 window.onload = function () {
     createBackCardOriginal();
     initializeGame();
@@ -65,6 +67,8 @@ function resetValues() {
     yourAceCount = 0;
 
     canHit = true;//allows the player (you) to draw while yourSum <= 21
+    document.getElementById("dealer-sum").innerText = "";
+    document.getElementById("your-sum").innerText = "";
     document.getElementById("results").innerText = "";
 }
 
@@ -148,20 +152,25 @@ function stay() {
 
     let message = "";
     if (yourSum > 21) {
-        message = "You Lose!";
+        message = "You Lose $100!";
+        currentAmount -= 100;
     } else if (dealerSum > 21) {
-        message = "You Win!";
+        message = "You Win $100!";
+        currentAmount += 100;
     }
     //both you and dealer <= 21
     else if (yourSum == dealerSum) {
         message = "Tie!";
     } else if (yourSum > dealerSum) {
-        message = "You Win!";
+        message = "You Win $100!";
+        currentAmount += 100;
     } else if (yourSum < dealerSum) {
-        message = "You Lose!";
+        message = "You Lose $100!";
+        currentAmount -= 100;
     }
 
     document.getElementById("results").innerText = message;
+    document.getElementById("currentAmount").innerText = currentAmount < 0 ? "-$" + Math.abs(currentAmount) : "$" + currentAmount;
     document.getElementById("dealer-sum").innerText = dealerSum;
     document.getElementById("your-sum").innerText = yourSum;
 }
