@@ -49,7 +49,7 @@
   <h1 style="font-family: 'Chopin Script', cursive; text-align: center;"><b>Blackjack</b></h1>
   <div class="heading-line mb-1"></div>
   <h3 class="text-center">Instructions:</h3>
-  <p class="text-center lh-lg">Click Hit to receive another card and Stay to end your turn.</p>
+  <p class="text-center lh-lg">Click Hit to receive another card and Stay to end your turn. To play again, click the Restart button.</p>
   <div id="body">
     <h2>Dealer: <span id="dealer-sum"></span></h2>
     <div id="dealer-cards">
@@ -64,6 +64,7 @@
     <button id="stay" class="btn btn-primary">Stay</button>
     <br><br>
     <p id="results" style="font-weight: bold"></p>
+    <button onclick="initializeGame()" class="btn btn-primary">Restart</button>
   </div>
 </div>
 </body>

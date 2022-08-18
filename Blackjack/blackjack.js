@@ -9,10 +9,63 @@ var deck;
 
 var canHit = true;//allows the player (you) to draw while yourSum <= 21
 
+var backCardOrig;
+var backCard
+
 window.onload = function () {
+    createBackCardOriginal();
+    initializeGame();
+}
+
+function createBackCardOriginal() {
+    backCardOrig = document.createElement("img");
+    backCardOrig.id = "hidden";
+    backCardOrig.src = "./cards/BACK.png";
+}
+
+function initializeGame() {
+    resetDealersCards();
+    removeAllYourCards();
+    resetValues();
     buildDeck();
     shuffleDeck();
     startGame();
+}
+
+function resetDealersCards() {
+    removeAllDealerCards()
+    insertBackCard();
+}
+
+function removeAllDealerCards() {
+    let dealerCardsPlace = document.getElementById("dealer-cards");
+    while (dealerCardsPlace.firstChild) {
+        dealerCardsPlace.removeChild(dealerCardsPlace.firstChild);
+    }
+}
+
+function insertBackCard() {
+    backCard = backCardOrig.cloneNode(true);
+    let dealerCardsPlace = document.getElementById("dealer-cards");
+    dealerCardsPlace.append(backCard);
+}
+
+function removeAllYourCards() {
+    let yourCardsPlace = document.getElementById("your-cards");
+    while (yourCardsPlace.firstChild) {
+        yourCardsPlace.removeChild(yourCardsPlace.firstChild);
+    }
+}
+
+function resetValues() {
+    dealerSum = 0;
+    yourSum = 0;
+
+    dealerAceCount = 0;
+    yourAceCount = 0;
+
+    canHit = true;//allows the player (you) to draw while yourSum <= 21
+    document.getElementById("results").innerText = "";
 }
 
 function buildDeck() {
@@ -69,6 +122,7 @@ function startGame() {
 }
 
 function hit() {
+
     if (!canHit) {
         return;
     }
