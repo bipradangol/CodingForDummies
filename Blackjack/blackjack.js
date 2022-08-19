@@ -8,6 +8,7 @@ var hidden;
 var deck;
 
 var canHit = true;//allows the player (you) to draw while yourSum <= 21
+var gameOver = false;
 
 var backCardOrig;
 var backCard
@@ -62,6 +63,7 @@ function removeAllYourCards() {
 }
 
 function resetValues() {
+    gameOver = false;
     dealerSum = 0;
     yourSum = 0;
 
@@ -146,6 +148,10 @@ function hit() {
 }
 
 function stay() {
+    if (gameOver){
+        return;
+    }
+    gameOver = true;
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
 
