@@ -5,9 +5,11 @@ var currTile;
 var otherTile; //image 3
 
 var turns = 0;
+var gameOver = false;
 
 // var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
+var leastMove = 9999999;
 
 window.onload = function () {
     for (let r = 0; r < rows; r++) {
@@ -27,6 +29,19 @@ window.onload = function () {
             document.getElementById("board").append(tile);
         }
     }
+}
+
+function initializeGame() {
+    turns = 0;
+    document.getElementById("turns").innerText = turns;
+    imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
+    gameOver = false;
+    let board = document.getElementById("board");
+    let tiles = board.getElementsByTagName("img");
+    for (let i = 0; i < tiles.length; i++) {
+        tiles[i].src =  "img/" + imgOrder.shift() + '.jpg';
+    }
+
 }
 
 function dragStart(e) {
@@ -69,7 +84,7 @@ function findEmptyImageTile() {
 }
 
 function dragEnd() {
-    if (!otherTile.src.includes("3.jpg")) {
+    if (!otherTile.src.includes("3.jpg") || gameOver) {
         return;
     }
 
@@ -98,5 +113,24 @@ function dragEnd() {
 
         turns += 1;
         document.getElementById("turns").innerText = turns;
+        if (isCompleted()) {
+            document.getElementById("gameResult").innerText = "You did it!";
+            gameOver = true;
+            if (turns < leastMove) {
+                leastMove = turns;
+                document.getElementById("leastMoves").innerText = leastMove;
+            }
+        }
     }
+}
+
+function isCompleted() {
+    let board = document.getElementById("board");
+    let tiles = board.getElementsByTagName("img");
+    for (let i = 0; i < tiles.length; i++) {
+        if (!tiles[i].src.includes(i + 1 + '.jpg')) {
+            return false;
+        }
+    }
+    return true;
 }
