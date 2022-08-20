@@ -16,12 +16,13 @@ window.onload = function () {
             tile.id = r + "-" + c;
             tile.src = "img/" + imgOrder.shift() + ".jpg";
 
-            tile.addEventListener("dragstart", dragStart);
-            tile.addEventListener("dragover", dragOver);
-            tile.addEventListener("dragenter", dragEnter);
-            tile.addEventListener("dragleave", dragLeave);
-            tile.addEventListener("drop", dragDrop);
-            tile.addEventListener("dragend", dragEnd);
+            tile.addEventListener("click", onClick);
+            // tile.addEventListener("dragstart", dragStart);
+            // tile.addEventListener("dragover", dragOver);
+            // tile.addEventListener("dragenter", dragEnter);
+            // tile.addEventListener("dragleave", dragLeave);
+            // tile.addEventListener("drop", dragDrop);
+            // tile.addEventListener("dragend", dragEnd);
 
             document.getElementById("board").append(tile);
         }
@@ -46,6 +47,25 @@ function dragLeave() {
 
 function dragDrop() {
     otherTile = this;
+}
+
+function onClick(e) {
+    currTile = e.target;
+    otherTile = findEmptyImageTile();
+    dragEnd();
+}
+
+function findEmptyImageTile() {
+    let board = document.getElementById("board");
+    let tiles = board.getElementsByTagName("img");
+    let emptyImageTile = '';
+    for (let i = 0; i < tiles.length; i++) {
+        if (tiles[i].src.includes('3.jpg')) {
+            emptyImageTile = tiles[i];
+            break;
+        }
+    }
+    return emptyImageTile;
 }
 
 function dragEnd() {
