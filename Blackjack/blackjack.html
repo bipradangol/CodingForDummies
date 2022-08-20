@@ -46,12 +46,12 @@
   </div>
 </nav>
 <div class="container" style="margin-top: 80px; margin-bottom: 50px">
-  <h1 style="font-family: 'Chopin Script', cursive; text-align: center;"><b>Blackjack</b></h1>
+  <h1 style="font-family: 'Chopin Script', cursive; text-align: center;"><b>Blackjack /Get 21</b></h1>
   <div class="heading-line mb-1"></div>
   <h3 class="text-center">Instructions:</h3>
-  <p class="text-center lh-sm">Click Hit to receive another card and Stay to end your turn. To play again, click the Restart button.
-    The goal is to have a greater sum than the dealer's sum but not more than 21.
-    All picture cards have a value of 10 and Aces can be 1 or 11 in favor of the player.</p>
+  <p class="text-center lh-sm">The goal is to have a greater sum than the dealer's sum but not more than 21. If your sum is greater than 21, you will lose.
+    All picture cards have a value of 10 and Aces can be 1 or 11 in favor of the player. Click Get a Card to receive another card and Done to end your turn. To play again, click the Restart button.
+    </p>
   <div id="body">
     <h2>Your Current Amount: <span id="currentAmount">$0</span></h2>
     <br>
@@ -64,8 +64,8 @@
     <div id="your-cards"></div>
 
     <br>
-    <button id="hit"  class="btn btn-primary">Hit</button>
-    <button id="stay" class="btn btn-primary">Stay</button>
+    <button id="hit"  class="btn btn-primary">Get a Card</button>
+    <button id="stay" class="btn btn-primary">Done</button>
     <br><br>
     <p id="results" style="font-weight: bold"></p>
     <button onclick="initializeGame()" class="btn btn-primary">Restart</button>
