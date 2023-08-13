@@ -100,6 +100,14 @@ function shuffleDeck() {
 }
 
 function startGame() {
+    document.getElementById("restartButton").disabled = true;
+    var gambledAmount = getCookie("gambledAmount")
+    if (gambledAmount) {
+        currentAmount -= gambledAmount
+        setCookie("currentAmount", currentAmount, 1)
+        document.getElementById("currentAmount").innerText = currentAmount < 0 ? "-$" + Math.abs(currentAmount) : "$" + currentAmount;
+    }
+    setCookie("gambledAmount", 100, 1);
     hidden = deck.pop();
     dealerSum += getValue(hidden);
     dealerAceCount += checkAce(hidden);
@@ -182,6 +190,8 @@ function stay() {
     document.getElementById("currentAmount").innerText = currentAmount < 0 ? "-$" + Math.abs(currentAmount) : "$" + currentAmount;
     document.getElementById("dealer-sum").innerText = dealerSum;
     document.getElementById("your-sum").innerText = yourSum;
+    document.getElementById("restartButton").disabled = false;
+    setCookie("gambledAmount", 0, 1);
 }
 
 function getValue(card) {
